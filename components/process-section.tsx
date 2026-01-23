@@ -41,7 +41,7 @@ export function ProcessSection() {
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.8 }}
                         className="relative aspect-5/4 rounded-[40px] overflow-hidden shadow-2xl hidden lg:block"
                     >
@@ -67,7 +67,7 @@ export function ProcessSection() {
                                         key={index}
                                         initial={{ opacity: 0, x: -20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
+                                        viewport={{ once: false }}
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
                                         className="relative pl-16 md:pl-24 group cursor-default"
                                         onMouseEnter={() => setActiveIndex(index)}
@@ -98,13 +98,13 @@ export function ProcessSection() {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             className="flex justify-end"
                         >
                             <button className="px-5 py-2 rounded-full bg-gradient-to-r from-black to-primary text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20">
                                 <span className="translate-x-1">Démarrer mon dossier</span>
-                                <div  className="w-10 h-10 bg-white rounded-full flex items-center justify-center translate-x-3">
+                                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center translate-x-3">
                                     <ArrowRight className="w-4 h-4 -rotate-45 text-black group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </button>

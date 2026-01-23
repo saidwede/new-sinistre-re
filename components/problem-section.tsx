@@ -36,7 +36,7 @@ export function ProblemSection() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="mb-16 space-y-4 text-center lg:text-left"
                 >
                     <span className="text-white font-bold tracking-widest uppercase text-sm">Le constat</span>
@@ -55,7 +55,7 @@ export function ProblemSection() {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="p-8 rounded-[20px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 flex flex-col justify-between group h-full"
                         >
@@ -77,7 +77,7 @@ export function ProblemSection() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.8 }}
                         className="md:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-3 lg:row-start-1 relative rounded-[20px] overflow-hidden group shadow-2xl min-h-[320px] lg:min-h-full"
                     >

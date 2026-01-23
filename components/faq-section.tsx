@@ -31,12 +31,12 @@ export function FaqSection() {
 
     return (
         <section className="py-24 bg-white">
-            <div className="container mx-auto px-16 max-w-4xl">
-                <div className="text-center mb-16">
+            <div className="container mx-auto md:px-16 px-8 max-w-4xl">
+                <div className="text-center md:mb-16 mb-8">
                     <h2 className="text-xl md:text-xl font-light text-secondary mb-4">
                         FAQ
                     </h2>
-                    <p className="text-black text-5xl">
+                    <p className="text-black text-4xl md:text-5xl">
                         Tout ce que vous devez savoir
                     </p>
                 </div>

@@ -30,12 +30,12 @@ const solutions = [
 export function SolutionSection() {
     return (
         <section className="py-24 bg-white overflow-hidden">
-            
-            <div className="container mx-auto px-4 max-w-7xl">
+
+            <div className="container mx-auto px-6 md:px-4 max-w-7xl">
                 <motion.div
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.8 }}
                     className="space-y-6 "
                 >
@@ -54,12 +54,12 @@ export function SolutionSection() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95, x: -30 }}
                         whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="relative h-full rounded-[20px] overflow-hidden shadow-2xl order-2 lg:order-1"
+                        className="relative min-h-[400px] lg:h-full rounded-[20px] overflow-hidden shadow-2xl order-1"
                     >
                         <Image
-                            src="/img/solution-expert.png"
+                            src="/img/boxer.jpg"
                             alt="Expert Team Defending Your Interests"
                             fill
                             className="object-cover"
@@ -69,14 +69,14 @@ export function SolutionSection() {
                     </motion.div>
 
                     {/* Right Column: Solution Content */}
-                    <div className="space-y-12 order-1 lg:order-2">
+                    <div className="space-y-12 order-2 lg:order-2">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             {solutions.map((solution, index) => (
                                 <motion.div
                                     key={index}
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: false }}
                                     transition={{ duration: 0.8, delay: index * 0.2 }}
                                     className="space-y-4 group"
                                 >
@@ -95,7 +95,7 @@ export function SolutionSection() {
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.8, delay: 0.5 }}
                             className="p-8 rounded-[32px] bg-neutral-900 text-white flex items-center gap-6 shadow-xl shadow-neutral-950/10"
                         >

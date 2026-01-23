@@ -32,9 +32,19 @@ const accordionItems = [
 export function HeroAccordion() {
     const [expandedId, setExpandedId] = useState<string | null>("expertise");
     const [isHovered, setIsHovered] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        if (isHovered) return;
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 1024); // lg breakpoint
+        };
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+    useEffect(() => {
+        if (isHovered || isMobile) return;
 
         const interval = setInterval(() => {
             setExpandedId((prev) => {
@@ -45,7 +55,7 @@ export function HeroAccordion() {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [isHovered]);
+    }, [isHovered, isMobile]);
 
     return (
         <div
@@ -81,7 +91,7 @@ export function HeroAccordion() {
                         <motion.div
                             layout
                             animate={{
-                                padding: isExpanded ? "2.5rem" : "0rem",
+                                padding: isExpanded ? (isMobile ? "1.5rem" : "2.5rem") : "0rem",
                                 justifyContent: isExpanded ? "flex-end" : "center",
                                 alignItems: isExpanded ? "flex-start" : "center",
                             }}
@@ -90,13 +100,20 @@ export function HeroAccordion() {
                         >
                             <motion.h3
                                 layout
-                                className="
+                                className={`
                                     m-0 text-lg lg:text-3xl font-bold text-white uppercase tracking-wider whitespace-nowrap 
-                                    origin-right absolute left-[25px] top-[25px]
-                                "
+                                    origin-right absolute ${isMobile ? 'left-6 top-6' : 'left-[25px] top-[25px]'}
+                                `}
                                 animate={{
-                                    top: isExpanded ? '25px' : "30%",
-                                    transform: isExpanded ? "translateX(0px) rotate(0deg)" : "translateX(calc(-100% + 50px)) translateY(-100%) rotate(-90deg)",
+                                    top: isExpanded ? (isMobile ? "24px" : "25px") : (isMobile ? "50%" : "30%"),
+                                    left: isExpanded ? (isMobile ? "24px" : "25px") : (isMobile ? "24px" : "25px"),
+                                    x: isExpanded ? "0%" : (isMobile ? "-50%" : "0%"),
+                                    y: isExpanded ? "0%" : (isMobile ? "-50%" : "0%"),
+                                    transform: isExpanded
+                                        ? "translateX(0px) rotate(0deg)"
+                                        : (isMobile
+                                            ? "translateX(0px) rotate(0deg)"
+                                            : "translateX(calc(-100% + 50px)) translateY(-100%) rotate(-90deg)"),
                                 }}
                                 transition={{ duration: 0.9, ease: [0.32, 0.72, 0, 1] }}
                             >
@@ -114,7 +131,7 @@ export function HeroAccordion() {
                                 </p>
                                 <button className="flex items-center gap-2 bg-white text-black px-4 py-1 rounded-full font-medium text-sm transition-all cursor-pointer w-fit shadow-lg">
                                     <span className="text-black translate-x-3">Détails</span>
-                                    <div  className="w-10 h-10 bg-black rounded-full flex items-center justify-center translate-x-3">
+                                    <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center translate-x-3">
                                         <ArrowRight className="w-4 h-4 -rotate-45 text-white transition-transform" />
                                     </div>
                                 </button>

@@ -10,7 +10,7 @@ export default function Hero() {
 
                 {/* Left Side: Text and Branding */}
                 <div className="relative z-10 space-y-10 animate-in slide-in-from-left duration-700">
-                    <div className="space-y-6">
+                    <div className="space-y-6 md:block flex flex-col items-center">
                         <div className="inline-flex items-center gap-2 px-3 py-1 text-secondary text-sm font-semibold tracking-wide uppercase">
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -19,7 +19,7 @@ export default function Hero() {
                             #1 Gestion de Sinistre en Afrique
                         </div>
 
-                        <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold text-black leading-[1.1] tracking-tight">
+                        <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-black leading-[1.1] tracking-tight text-center md:text-left">
                             Obtenez <br />
                             l’indemnisation <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-primary">
@@ -27,7 +27,7 @@ export default function Hero() {
                             </span>
                         </h1>
 
-                        <p className="text-md text-black max-w-lg leading-relaxed font-">
+                        <p className="text-md text-black max-w-lg leading-relaxed text-center md:text-left">
                             Nos experts vous accompagnent à chaque étape pour défendre vos intérêts et maximiser votre indemnisation face aux assurances.
                         </p>
                     </div>
@@ -41,7 +41,7 @@ export default function Hero() {
                         </button>
                     </div>
 
-                    <div className="pt-8 flex items-center gap-6">
+                    <div className="pt-8 flex flex-col md:flex-row items-center gap-6">
                         <div className="flex -space-x-3 overflow-hidden">
                             {['cm', 'cf', 'cg', 'ci', 'ga', 'gq', 'ml', 'ne', 'bf', 'bj'].map((code) => (
                                 <div key={code} className="w-10 h-10 rounded-full border-2 border-white bg-gray-100 overflow-hidden relative shadow-sm hover:z-10 transition-all duration-300 hover:scale-110">
@@ -54,7 +54,7 @@ export default function Hero() {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-sm text-gray-500 font-medium">
+                        <p className="text-sm text-gray-500 font-medium text-center md:text-left">
                             <span className="text-secondary font-bold">+500 dossiers</span> réglés en Afrique
                         </p>
                     </div>

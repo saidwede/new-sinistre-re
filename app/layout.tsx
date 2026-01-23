@@ -8,12 +8,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Sinistre-RE",
+  title: "Sinistre-RE - Expert en gestion de sinistres d'assurances.",
   description: "Sinistre-RE",
 };
 
 import TopBar from "@/components/top-bar";
 import { Footer } from "@/components/footer";
+import { FloatingChat } from "@/components/floating-chat";
 
 export default function RootLayout({
   children,
@@ -27,11 +28,12 @@ export default function RootLayout({
       >
         <TopBar />
         <main>
-          <div className="">
+          <div className="pt-10 md:pt-0">
             {children}
           </div>
         </main>
         <Footer />
+        <FloatingChat />
       </body>
     </html>
   );

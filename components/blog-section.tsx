@@ -32,7 +32,7 @@ export function BlogSection() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="mb-16 space-y-4 text-center"
                 >
                     <span className="text-primary font-bold tracking-widest uppercase text-sm">Expertise & Conseils</span>
@@ -51,7 +51,7 @@ export function BlogSection() {
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="bg-white border-2 border-white rounded-[20px] overflow-hidden transition-all duration-500 group cursor-pointer h-full"
                             >

@@ -42,7 +42,7 @@ export function CoveredClaims() {
                             key={index}
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="relative aspect-4/5 rounded-[32px] overflow-hidden group cursor-pointer shadow-xl"
                         >
@@ -78,7 +78,7 @@ export function CoveredClaims() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="mt-16 flex font-bold text-primary justify-center"
                 >
