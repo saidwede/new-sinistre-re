@@ -80,7 +80,8 @@ export function HeroAccordion() {
                             <Image
                                 src={item.bgImage}
                                 alt={item.title}
-                                fill
+                                width={700}
+                                height={700}
                                 className="object-cover transition-transform duration-1000"
                             />
                             {/* Overlay */}
