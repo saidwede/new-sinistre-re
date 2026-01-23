@@ -82,7 +82,7 @@ export default function TopBar() {
                 </div>
 
                 {/* Center: Desktop Menus and Language Switch */}
-                <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-md rounded-4xl py-4 px-8 border border-white/20 shadow-sm">
+                <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-md rounded-4xl py-4 px-8 border border-white/20">
                     <div className="flex items-center gap-6 text-md text-black font-medium">
                         {menuItems.map((item) => (
                             <Link key={item.label} href={item.href} className="hover:text-primary transition-colors">
