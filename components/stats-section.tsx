@@ -73,7 +73,7 @@ export function StatsSection() {
                         className="relative aspect-[16/9] lg:aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl"
                     >
                         <Image
-                            src="/img/stats.jpg"
+                            src="/img/force.jpg"
                             alt="Expert SINISTRE-RE"
                             fill
                             className="object-cover"

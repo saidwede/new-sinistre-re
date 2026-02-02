@@ -11,7 +11,7 @@ const accordionItems = [
         title: "Expertise & Audit",
         description: "Analyse approfondie de votre contrat pour identifier toutes les garanties applicables et maximiser vos droits.",
         icon: <ShieldCheck className="w-6 h-6" />,
-        bgImage: "/img/hero-image.jpg"
+        bgImage: "/img/audit.jpg"
     },
     {
         id: "negotiation",

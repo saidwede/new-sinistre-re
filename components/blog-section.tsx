@@ -8,19 +8,19 @@ const blogPosts = [
         category: "Expertise",
         title: "Comment déchiffrer les garanties complexes de votre contrat d'assurance",
         description: "Apprenez à identifier les clauses cachées qui pourraient limiter votre indemnisation en cas de sinistre majeur.",
-        image: "/img/blog-expertise.png"
+        image: "/img/analyse.jpg"
     },
     {
         category: "Conseil",
         title: "Les 5 étapes cruciales à suivre immédiatement après un sinistre",
         description: "Ce que vous faites dans les premières 24 heures peut déterminer le succès ou l'échec de votre demande d'indemnisation.",
-        image: "/img/blog-conseil.png"
+        image: "/img/man_stair.jpg"
     },
     {
         category: "Gestion",
         title: "Pourquoi l'expert de votre compagnie n'est pas forcément votre allié",
         description: "Comprendre le rôle de l'expert d'assurance et pourquoi un contre-expertise est souvent indispensable.",
-        image: "/img/blog-gestion.png"
+        image: "/img/sensitive.jpg"
     }
 ];
 

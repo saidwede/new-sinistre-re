@@ -7,19 +7,19 @@ import { ArrowRight, Link, Plus } from "lucide-react";
 const claims = [
     {
         title: "Assurance Automobile",
-        image: "/img/car.jpg",
+        image: "/img/car2.jpg",
     },
     {
         title: "Assurance Vie",
-        image: "/img/life.jpg",
+        image: "/img/death.jpg",
     },
     {
         title: "Assurance Maladie",
-        image: "/img/healthcare.jpg",
+        image: "/img/healthcare2.jpg",
     },
     {
         title: "Assurance Risques en Chantier",
-        image: "/img/work.jpg",
+        image: "/img/work2.jpg",
     }
 ];
 
