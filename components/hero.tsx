@@ -5,7 +5,7 @@ import { HeroAccordion } from "./hero-accordion";
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden bg-white py-12 lg:py-20">
+        <section className="relative flex items-center overflow-hidden bg-white py-12 lg:py-32">
             <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                 {/* Left Side: Text and Branding */}
