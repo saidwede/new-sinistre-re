@@ -29,7 +29,7 @@ export default function RootLayout({
       >
         <TopBar />
         <main>
-          <div className="pt-10 md:pt-0">
+          <div className="pt-10 lg:pt-0">
             {children}
           </div>
         </main>

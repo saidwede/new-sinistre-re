@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export function Footer() {
     return (
-        <footer className="bg-secondary text-white pt-24 pb-12 border-t border-white/10">
+        <footer className="bg-secondary text-white pt-24 pb-12 border-t border-white/10 max-w-full overflow-hidden">
             <div className="container mx-auto px-4 max-w-7xl">
                 {/* Top Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 pb-20 border-b border-white/5">
+                <div className="grid grid-cols-1 lg:flex justify-between gap-12 lg:gap-24 pb-20 border-b border-white/5">
                     {/* Brand & Newsletter */}
                     <div className="lg:col-span-5 space-y-10">
                         {/* <div className="flex items-center gap-3">
@@ -50,7 +50,7 @@ export function Footer() {
                     
 
                     {/* Links Grid */}
-                    <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-12">
+                    <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-16">
                         {/* Column 1 */}
                         <div className="space-y-6">
                             <h4 className="text-lg font-bold text-white">Services</h4>

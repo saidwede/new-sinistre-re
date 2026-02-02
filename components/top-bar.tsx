@@ -56,7 +56,7 @@ export default function TopBar() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="flex flex-col gap-1.5 p-2 md:hidden z-60 relative"
+                        className="flex flex-col gap-1.5 p-2 lg:hidden z-60 relative"
                         aria-label="Toggle menu"
                     >
                         <motion.div
@@ -82,7 +82,7 @@ export default function TopBar() {
                 </div>
 
                 {/* Center: Desktop Menus and Language Switch */}
-                <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-md rounded-4xl py-4 px-8 border border-white/20">
+                <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-md rounded-4xl py-4 px-8 border border-white/20">
                     <div className="flex items-center gap-6 text-md text-black font-medium">
                         {menuItems.map((item) => (
                             <Link key={item.label} href={item.href} className="hover:text-primary transition-colors">
